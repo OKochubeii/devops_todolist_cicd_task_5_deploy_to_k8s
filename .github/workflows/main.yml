@@ -128,13 +128,13 @@ jobs:
       environment: development
       version: ${{ github.sha }}
 
-  # deploy-helm-staging:
-  #   name: Deploy Helm
-  #   uses: ./.github/workflows/deploy-to-kind-cluster.yml
-  #   needs: deploy-helm-dev
-  #   secrets: inherit
-  #   with:
-  #     environment: staging
-  #     version: ${{ github.sha }}
-  #     helm-release-name: todoapp-staging
-  #     helm-values-path: './helm-charts/todoapp/values/stg.yaml'
+  deploy-helm-staging:
+    name: Deploy Helm
+    uses: ./.github/workflows/deploy-to-kind-cluster.yml
+    needs: deploy-helm-dev
+    secrets: inherit
+    with:
+      environment: staging
+      version: ${{ github.sha }}
+      helm-release-name: todoapp-staging
+      helm-values-path: './helm-charts/todoapp/values/stg.yaml'
