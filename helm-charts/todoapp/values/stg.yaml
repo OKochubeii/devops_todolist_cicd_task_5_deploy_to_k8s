@@ -1,7 +1,5 @@
-mysql:
-  namespace: maysql-staging
 todoapp:
-  namespace: todoapp-staging
+  namespace: todoapp
   image:
     repository: ikulyk404/todoapp
 
