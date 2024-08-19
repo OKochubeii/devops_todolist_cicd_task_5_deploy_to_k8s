@@ -48,7 +48,7 @@ jobs:
     - name: Create k8s Kind Cluster
       run: |
         cd ..
-        kind create cluster --config --debug ./cluster.yml
+        kind create cluster --config ./cluster.yml
 
     - name: Dry Run Helm
       run: |
