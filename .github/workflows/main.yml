@@ -131,7 +131,7 @@ jobs:
   deploy-helm-staging:
     needs: deploy-helm-development
     uses: ./.github/workflows/deploy-to-kind-cluster.yml
-    name: Saging Helm
+    name: Staging Helm
     secrets: inherit
     with:
       environmet: staging
