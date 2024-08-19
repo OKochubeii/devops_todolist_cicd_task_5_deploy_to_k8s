@@ -46,9 +46,7 @@ jobs:
       uses: azure/setup-kubectl@v4
 
     - name: Create k8s Kind Cluster
-      uses: helm/kind-action@v1
-      with:
-        config: kind create cluster --config ./cluster.yml
+      run: kind create cluster --config ./cluster.yml
 
     - name: Dry Run Helm
       run: |
